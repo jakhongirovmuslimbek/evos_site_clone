@@ -6,16 +6,16 @@ from django.utils.translation import gettext_lazy as _
 
 class MyUserAdmin(UserAdmin):
     fieldsets = (
-        (None, {"fields": ("username", "password")}),
+        (None, {"fields": ("email", "password")}),
         (
             _("Personal info"), 
             {
                 "fields": (
+                    "username",
                     "image",
                     "first_name", 
                     "last_name",
                     "middle_name",
-                    "email",
                 )
             }
         ),
